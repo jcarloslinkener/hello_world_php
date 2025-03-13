@@ -7,4 +7,11 @@ pipeline {
             }
         }
     }
+
+      post {
+        always {
+            echo 'Finished, cleaning up workspace...'
+            deleteDir() /* clean up our workspace */
+        }
+    }
 }
